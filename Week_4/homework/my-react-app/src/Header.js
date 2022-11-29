@@ -17,7 +17,7 @@ export default function Header(props) {
          <br></br>
          <div className = "upper-weather-display">
            <div>
-               <div className="weather-status" style= {{fontSize: '25px', marginTop: '30px'}}>
+               <div className = "weather-status" style= {{fontSize: '25px', marginTop: '30px'}}>
                {props.title}
                </div>
                <div className="weather-status" style= {{fontSize: '60px'}}>

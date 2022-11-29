@@ -6,7 +6,7 @@ export default function DayContainer(props, index) {
    console.log(`Upcoming Temp: ${props.list[props.index].main.temp_max}° to ${props.list[props.index].main.temp_min}°`)
  
    function setDate(weather, timezone) {
-       const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+       const days =  ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
        console.log(weather)
        const date = new Date(weather.dt * 1000-(timezone * 1000));
        return `${days[date.getDay()]} ${date.getDate()}`;

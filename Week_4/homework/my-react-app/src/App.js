@@ -96,7 +96,7 @@ function App() {
      <div className="side-container">
        <div style = {{display: "flex", justifyContent: 'space-around', marginTop: '75%'}}>
          <input className="search-input" placeholder="search for a city" onChange={(e) => setInput(e.target.value)} value = {input}></input>
-         <button className="search-button" onClick = {() => listCities()}>
+         <button  className="search-button" onClick = {() => listCities()}>
            search
          </button>
        </div>
