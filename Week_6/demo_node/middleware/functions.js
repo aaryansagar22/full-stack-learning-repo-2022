@@ -24,6 +24,8 @@ function validateSchema(obj) {
 
 function handleErrors(err, req, res, next) {
   //TODO: write an error handler that logs out the message of the error and returns it to the user
+  console.log(err.stack);
+  res.send(err.stack);
 }
 
 module.exports = { validateSchema, handleErrors };

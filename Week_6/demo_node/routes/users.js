@@ -4,6 +4,7 @@ const cors = require("cors");
 
 // Define route and middlewares
 const users = express.Router();
+const middleware = require("../middleware/functions");
 users.use(cors());
 users.use(express.json());
 
@@ -44,9 +45,16 @@ users.get("/:user_id", (req, res, next) => {
   } else {
     throw Error("User not found");
   }
-});
+}, 
+middleware.handleErrors
+);
 
 // TODO: add POST (Create) route with json input validation middleware
+
+users.post("/", middleware.validateSchema(User), (req, res, next) => {
+  console.log(req.body);
+  res.send("Success");
+})
 
 // Export Route
 module.exports = users;
