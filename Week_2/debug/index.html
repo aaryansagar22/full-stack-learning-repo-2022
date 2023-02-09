@@ -17,11 +17,11 @@
     <form>
       <input type="text" id="number" value="0" />
     </form>
-    <button onclick="() => incrementValue()">Increase</button>
+    <button onclick= "incrementValue()">Increase</button>
     <script>
       function incrementValue() {
         var value = parseInt(document.getElementById("number").value);
-        value++;
+        value = isNaN(value) ? 0 : value + 1;
         document.getElementById("number").value = value;
       }
     </script>

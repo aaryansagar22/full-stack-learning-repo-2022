@@ -1,0 +1,66 @@
+:root {
+    --prim-orange: hsl(31, 77%, 52%);
+    --prim-cyan: hsl(184, 100%, 22%);
+    --prim-dark-cyan: hsl(179, 100%, 13%);
+    --neu-white: hsla(0, 0%, 100%, 0.75);
+    --neu-gray: hsl(0, 0%, 95%);
+  
+    --gray: #999;
+    --dark-gray: #555;
+    --black: #000;
+  }
+
+body {
+    font-size: 20px;
+    font-family: "Lexend Duca", sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: auto;
+    background-color: var(--neu-gray);
+}
+
+main {
+     display: flex;
+     flex: row;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     flex-wrap: wrap;
+}
+
+article {
+    max-width: 250px;
+    height: 450px;
+    padding: 40px;
+    position: relative;
+    border-radius: 7px;
+}
+
+article.sedan {
+    background-color: var(--prim-orange) ;
+}
+
+article.suv {
+    background-color: var(--prim-cyan);
+}
+
+article.luxury {
+    background-color: var(--prim-dark-cyan);
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    font-family: inherit;
+    border-radius: 30px;
+}
+
+.sedan button {
+    background: var(--neu-gray);
+    color: var(--prim-orange);
+}
+
+button:hover {
+    background-color: transparent;
+    color: var(--neu-gray);
+}
